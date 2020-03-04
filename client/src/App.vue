@@ -19,5 +19,15 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style>
+html {
+  height: 100%;
+}
+body {
+  background-color: #FFFFF3;
+  
+
+
+}
+
 </style>

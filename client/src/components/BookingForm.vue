@@ -9,8 +9,8 @@
 
     <label for="checked_in">Checked In?</label>
     <select id="checked_in" v-model="checked_in">
-      <option :value="true">Checked in</option>
-      <option :value="false">Not Checked in</option>
+      <option value="true">Checked in</option>
+      <option value="false">Not Checked in</option>
     </select>
     <!-- <input type="text" id="checked_in" v-model="checked_in" required/> -->
 
@@ -50,4 +50,11 @@ export default {
 </script>
 
 <style lang="css" scoped>
+form {
+  margin-top: 20px;
+}
+
+input {
+  margin: 0.2em 1.5em 0.2em 0.4em;
+}
 </style>

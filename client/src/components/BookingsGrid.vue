@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="">
+  <div class="booking-list">
  <booking-card v-for="(booking, index) in bookings" :key="index" :booking="booking"/>
    </div>
 </template>
@@ -33,6 +33,8 @@ export default {
   }
 }
 </script>
-
-<style lang="css" scoped>
+<style>
+.booking-list {
+  justify-content: center;
+}
 </style>
