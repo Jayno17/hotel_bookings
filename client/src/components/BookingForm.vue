@@ -8,7 +8,11 @@
     <input type="text" id="email" v-model="email" required/>
 
     <label for="checked_in">Checked In?</label>
-    <input type="text" id="checked_in" v-model="checked_in" required/>
+    <select id="checked_in" v-model="checked_in">
+      <option :value="true">Checked in</option>
+      <option :value="false">Not Checked in</option>
+    </select>
+    <!-- <input type="text" id="checked_in" v-model="checked_in" required/> -->
 
     <input type="submit" value="Save" id="save"/>
 
@@ -36,9 +40,9 @@ export default {
       const booking ={
         name:this.name,
         email:this.email,
-        checked_in:checked_in
+        checked_in: this.checked_in
       }
-      Bookings.postBooking(booking)
+      BookingsService.postBooking(booking)
       .then(res=>eventBus.$emit('booking-added',res))
     }
   }

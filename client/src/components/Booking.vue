@@ -4,6 +4,7 @@
 <h3>Name: {{booking.name}}</h3>
 <h3>Email: {{booking.email}}</h3>
 <h3>Checked in? : {{booking.checked_in}}</h3>
+<button type="button" v-on:click="deleteBooking">Delete</button>
   </div>
 </template>
 
